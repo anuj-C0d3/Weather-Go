@@ -11,7 +11,7 @@ class Weatherdata{
     location = this.location;
   }
   Future<void> getData() async{
-    Response res = await get(Uri.parse("https://api.openweathermap.org/data/2.5/weather?q=$location&appid=91a1f3c92c927fbe753557571bdc11e8"));
+    Response res = await get(Uri.parse("https://api.openweathermap.org/data/2.5/weather?q=$location&"));
     Map data = jsonDecode(res.body);
     Map getWind_data= data['wind'];
     String getWindSpeed = getWind_data['speed'].toString();
